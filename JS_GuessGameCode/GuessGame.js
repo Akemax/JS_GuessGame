@@ -6,8 +6,8 @@ const rl = readline.createInterface({
 });
 
 function playGame() {
-    const randomNumber = Math.floor(Math.random() * 101); // Загаданное число от 0 до 100
-    let attempts = 10; // Количество попыток
+    const randomNumber = Math.floor(Math.random() * 101);
+    let attempts = 10;
     let previousGuesses = [];
 
     console.log("Игра 'Угадай число'. Загадано число от 0 до 100. У вас есть 10 попыток, чтобы его угадать.");
@@ -25,7 +25,7 @@ function playGame() {
 
                 previousGuesses.push(guess);
                 attempts--;
-
+                
                 if (guess === randomNumber) {
                     console.log(`Поздравляем! Вы угадали число ${randomNumber} с ${10 - attempts} попыток!`);
                     askPlayAgain();
